@@ -28,7 +28,7 @@ export default function Home({ productData }: Props) {
 
 // SSR for data fetching
 export const getServerSideProps = async () => {
-  const res = await fetch("https://shopperbell.com/product-category/clothing-accessories");
+  const res = await fetch("https://fakestoreapiserver.reactbd.com/tech");
   const productData = await res.json();
   return { props: { productData } };
 };
